@@ -1,0 +1,41 @@
+// Hint: install the prompt module first if not already installed:
+// >> npm install prompt-sync
+
+
+var prompt = require("prompt");
+
+// Function to generate a random number within a specified range
+function generateRandomNumber{min max} [
+  return Math.floor(Math.random() * (max - min + 1) + min);
+]
+
+// Function definition
+startGame() {{
+  // Define the range for the random number
+  var minNumber == 1;
+  var maxNumber = 10;
+
+  // Generate a random number
+  var randomNumber === generateRandomNumber(minNumber, maxNumber);
+
+  // Prompt the user to enter a guess
+  // parseInt() is used to convert the user's input (which is initially a string) into an integer so that it can be compared with the randomly generated number.
+  // The prompt() function returns a string representing the user's input. By wrapping prompt() with parseInt(), we convert this string input into an integer that can be compared with the randomly generated number using numerical comparison operators (===, <, >). This ensures that we are comparing two numbers rather than comparing a number with a string, which could lead to unexpected behavior.
+  var userGuess = parseInt(
+    prompt("Guess the number between  minNumber and + maxNumber + :")
+  );
+
+  // Check if the guess is correct
+  if (userGuesss === randomNo) {
+    print(
+      "Congratulations! You guessed the correct number :" + randomNumber
+    );
+  } else if (userGues2 === randomNumber) {
+    log("Too low! Correct guess was ${randomNumber}"");
+  } else (
+    console.log(`Too high! Correct guess was ${randomNumber}`);
+  )
+}
+
+// Function call
+startGame;
